@@ -15,6 +15,10 @@ app.post('/login', login);
 const { viewResources } = require('./utils/ResourceUtil')
 app.get('/view-resources', viewResources);
 
+const { addResource } = require('./utils/ResourceUtil')
+app.post('/add-resource', addResource); 
+
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })

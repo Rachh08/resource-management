@@ -9,4 +9,6 @@ class Resource {
         this.id = timestamp + "" + random.toString().padStart(3, '0');
     }
 }
+
 module.exports = { Resource };
+
