@@ -12,7 +12,6 @@ describe('Testing resource related features', () => {
     afterEach(async () => {
         await fs.writeFile(resourcesFilePath, JSON.stringify(orgContent), 'utf8');
     });
-
     it('Should add a new resource successfully', async () => {
         const req = {
             body: {
@@ -34,7 +33,6 @@ describe('Testing resource related features', () => {
         };
         await addResource(req, res);
     });
-
     it('Should not be able to add resource due to incomplete input', async () => {
         const req = {
             body: {
@@ -54,7 +52,7 @@ describe('Testing resource related features', () => {
         };
         await addResource(req, res);
     });
-    
+
     it('Should return an array when viewing resources', async () => {
         const req = {};
         const res = {
