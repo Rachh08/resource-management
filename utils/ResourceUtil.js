@@ -8,6 +8,7 @@ async function viewResources(req, res) {
         return res.status(500).json({ message: error.message });
     }
 }
+
 async function addResource(req, res) {
     try {
         const name = req.body.name;
